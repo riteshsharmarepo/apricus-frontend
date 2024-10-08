@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+
+    <title>Kinsley Resort</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="bg-blue-50 font-sans">
+    <!-- Navbar -->
+    <nav
+      class="flex justify-between items-center p-6 shadow-md"
+      style="background-color: #c68d07"
+    >
+      <div class="text-2xl font-bold">Kinsley</div>
+      <ul class="flex space-x-6">
+        <li><a href="#" class="text-black hover:text-blue-500">Home</a></li>
+        <li><a href="#" class="text-black hover:text-blue-500">About</a></li>
+        <li><a href="#" class="text-black hover:text-blue-500">Rooms</a></li>
+        <li>
+          <a href="#" class="text-black hover:text-blue-500">Restaurant</a>
+        </li>
+        <li><a href="#" class="text-black hover:text-blue-500">Blog</a></li>
+        <li><a href="#" class="text-black hover:text-blue-500">Shop</a></li>
+        <li>
+          <a href="#" class="text-black hover:text-blue-500">Contact</a>
+        </li>
+      </ul>
+      <a href="#" class="px-4 py-2 bg-white text-black rounded-lg">Book now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative">
+      <img
+        src="/0389815740.jpg"
+        alt="Hero"
+        class="w-full h-[500px] object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white"
+      >
+        <h1 class="text-4xl font-bold">Welcome to Apricus</h1>
+        <p class="mt-4">
+          Deleniit rostrum laborisam praesentium quasi eum voluptate.
+        </p>
+
+        <!-- Search Form -->
+        <div class="flex flex-wrap justify-center items-end mt-6 space-x-4">
+          <!-- Check-in -->
+          <div class="flex flex-col">
+            <label for="checkin" class="text-white mb-2">Check-in</label>
+            <div class="relative">
+              <input
+                type="date"
+                id="checkin"
+                name="checkin"
+                class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <i
+                class="fas fa-calendar-alt absolute top-3 right-3 text-gray-400"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Check-out -->
+          <div class="flex flex-col">
+            <label for="checkout" class="text-white mb-2">Check-out</label>
+            <div class="relative">
+              <input
+                type="date"
+                id="checkout"
+                name="checkout"
+                class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <i
+                class="fas fa-calendar-alt absolute top-3 right-3 text-gray-400"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Adults -->
+          <div class="flex flex-col">
+            <label for="adults" class="text-white mb-2">Adults</label>
+            <div class="relative">
+              <input
+                type="number"
+                id="adults"
+                name="adults"
+                class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                min="1"
+                value="1"
+              />
+              <i class="fas fa-user absolute top-3 right-3 text-gray-400"></i>
+            </div>
+          </div>
+
+          <!-- Children -->
+          <div class="flex flex-col">
+            <label for="children" class="text-white mb-2">Children</label>
+            <div class="relative">
+              <input
+                type="number"
+                id="children"
+                name="children"
+                class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                min="0"
+                value="0"
+              />
+              <i
+                class="fas fa-user-plus absolute top-3 right-3 text-gray-400"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Search Button -->
+          <div class="">
+            <button
+              class="px-6 py-3 bg-white text-black rounded-lg shadow-md hover:bg-blue-600 transition"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="bg-white p-6 text-center rounded-lg shadow-md">
+          <i class="fas fa-shuttle-van text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-lg font-semibold">Airport transfer</h3>
+          <p class="text-gray-600">
+            Fast and convenient airport transfers to and from the hotel.
+          </p>
+        </div>
+        <div class="bg-white p-6 text-center rounded-lg shadow-md">
+          <i class="fas fa-concierge-bell text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-lg font-semibold">All inclusive</h3>
+          <p class="text-gray-600">
+            Enjoy a fully inclusive stay with all amenities covered.
+          </p>
+        </div>
+        <div class="bg-white p-6 text-center rounded-lg shadow-md">
+          <i class="fas fa-snowflake text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-lg font-semibold">Air-conditioned</h3>
+          <p class="text-gray-600">
+            Relax in fully air-conditioned rooms and public spaces.
+          </p>
+        </div>
+        <div class="bg-white p-6 text-center rounded-lg shadow-md">
+          <i class="fas fa-shield-alt text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-lg font-semibold">Under protection</h3>
+          <p class="text-gray-600">
+            Stay safe with our 24/7 security and surveillance services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-12" style="background-color: #d6b56f">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img
+            src="/3a5d5a6d83.jpg"
+            alt="Resort"
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <div class="flex flex-col justify-center">
+          <h2 class="text-3xl font-bold">We have 17+ years of Experience</h2>
+          <p class="mt-4 text-gray-600">
+            Consectetur adipiscing elit. Nihil, illum voluptate eveniet ex fugit
+            ea delectus, sed voluptatum. Laborum accusantium libero.
+          </p>
+          <button class="mt-6 px-4 py-2 bg-white text-black rounded-lg">
+            More about us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adventure Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col justify-center">
+          <h2 class="text-3xl font-bold">Start your Amazing Adventure!</h2>
+          <p class="mt-4 text-gray-600">
+            Consectetur adipiscing elit. Nihil, illum voluptate eveniet ex fugit
+            ea delectus, sed voluptatum. Laborum accusantium libero.
+          </p>
+          <button
+            class="mt-6 px-4 py-2 rounded-lg"
+            style="background-color: #d6b56f; color: white"
+          >
+            Choose a room
+          </button>
+        </div>
+        <div>
+          <img
+            src="/671a67250a.jpg"
+            alt="Adventure"
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <div style="background-color: #d6b56f">
+      <section class="py-12">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-gray-900">
+            Kinsley is Waiting for You!
+          </h1>
+          <p class="text-white mt-4 max-w-xl mx-auto">
+            Consectetur adipiscing elit. Nihil, illum voluptate eveniet ex fugit
+            ea delectus, sed voluptatem. Labore cumque id officia!
+          </p>
+          <a
+            href="#"
+            class="mt-8 inline-block bg-white text-black font-semibold py-2 px-6 rounded hover:bg-blue-700"
+          >
+            More our places
+          </a>
+        </div>
+
+        <!-- Slider Section -->
+        <div class="swiper-container my-8">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div class="max-w-md rounded overflow-hidden shadow-lg">
+                <img
+                  class="w-full h-56 object-cover"
+                  src="/3198411ccd.jpg"
+                  alt="View from the sea"
+                />
+                <div class="p-4">
+                  <span
+                    class="inline-block bg-orange-400 text-white px-3 py-1 text-sm font-semibold rounded-full mb-2"
+                    >View from the sea</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div class="max-w-md rounded overflow-hidden shadow-lg">
+                <img
+                  class="w-full h-56 object-cover"
+                  src="/98f14e37fe.jpg"
+                  alt="East Terrace"
+                />
+                <div class="p-4">
+                  <span
+                    class="inline-block bg-orange-400 text-white px-3 py-1 text-sm font-semibold rounded-full mb-2"
+                    >East terrace</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div class="max-w-md rounded overflow-hidden shadow-lg">
+                <img
+                  class="w-full h-56 object-cover"
+                  src="/e75e876fc3.jpg"
+                  alt="Terrace View"
+                />
+                <div class="p-4">
+                  <span
+                    class="inline-block bg-orange-400 text-white px-3 py-1 text-sm font-semibold rounded-full mb-2"
+                    >Terrace View</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div class="max-w-md rounded overflow-hidden shadow-lg">
+                <img
+                  class="w-full h-56 object-cover"
+                  src="/1.jpg"
+                  alt="Luxury Room"
+                />
+                <div class="p-4">
+                  <span
+                    class="inline-block bg-orange-400 text-white px-3 py-1 text-sm font-semibold rounded-full mb-2"
+                    >Luxury Room</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div class="max-w-md rounded overflow-hidden shadow-lg">
+                <img
+                  class="w-full h-56 object-cover"
+                  src="/2.jpg"
+                  alt="Ocean View"
+                />
+                <div class="p-4">
+                  <span
+                    class="inline-block bg-orange-400 text-white px-3 py-1 text-sm font-semibold rounded-full mb-2"
+                    >Ocean View</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div class="max-w-md rounded overflow-hidden shadow-lg">
+                <img
+                  class="w-full h-56 object-cover"
+                  src="/3.jpg"
+                  alt="Sunset by the Pool"
+                />
+                <div class="p-4">
+                  <span
+                    class="inline-block bg-orange-400 text-wh px-3 py-1 text-sm font-semibold rounded-full mb-2"
+                    >Sunset by the Pool</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination & Navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+    <!-- Stats Section -->
+    <section class="py-16">
+      <div class="container mx-auto">
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <!-- Stat Card 1 -->
+          <div class="bg-white rounded-lg shadow-lg text-center py-10">
+            <div class="text-4xl font-bold text-blue-700 mb-2">4</div>
+            <div class="text-lg font-semibold text-gray-500">Hotels</div>
+          </div>
+
+          <!-- Stat Card 2 -->
+          <div class="bg-white rounded-lg shadow-lg text-center py-10">
+            <div class="text-4xl font-bold text-blue-700 mb-2">127</div>
+            <div class="text-lg font-semibold text-gray-500">Rooms</div>
+          </div>
+
+          <!-- Stat Card 3 -->
+          <div class="bg-white rounded-lg shadow-lg text-center py-10">
+            <div class="text-4xl font-bold text-blue-700 mb-2">6</div>
+            <div class="text-lg font-semibold text-gray-500">Beaches</div>
+          </div>
+
+          <!-- Stat Card 4 -->
+          <div class="bg-white rounded-lg shadow-lg text-center py-10">
+            <div class="text-4xl font-bold text-blue-700 mb-2">4586</div>
+            <div class="text-lg font-semibold text-gray-500">Guests</div>
+          </div>
+        </div>
+
+        <!-- Our Best Rooms Section -->
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Best Rooms</h2>
+          <p class="text-gray-500 max-w-2xl mx-auto mb-8">
+            Consectetur adipiscing elit. Nihil, illum voluptate eveniet ex fugit
+            ea delectus, sed voluptatem. Laborum accusantium libero commodi id
+            officiis itaque esse adipisci, necessitatibus asperiores, illo odio.
+          </p>
+          <a
+            href="#"
+            class="font-semibold py-3 px-6 rounded-lg hover:bg-blue-700"
+            style="background-color: #d6b56f; color: white"
+          >
+            All rooms
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Room Card 1 -->
+    <div class="flex gap-11 h-11 w-full justify-center object-cover">
+      <div class="room-card transition-transform ease-in-out duration-500">
+        <div class="rounded-lg shadow-md p-4" style="background-color: #d6b56f">
+          <img
+            src="/7.jpg"
+            alt="Deluxe Room"
+            class="w-full h-40 object-cover rounded-md"
+          />
+          <div class="mt-4">
+            <h3 class="text-lg font-semibold">Deluxe Room</h3>
+            <p class="text-sm text-gray-600">Adults: 4 • Size: 95ft²</p>
+            <p class="mt-2 text-green-500 font-bold">€49 per night</p>
+            <button
+              class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Room Card 2 -->
+      <div class="room-card transition-transform ease-in-out duration-500">
+        <div class="rounded-lg shadow-md p-4" style="background-color: #d6b56f">
+          <img
+            src="/6.jpg "
+            alt="Standard Room"
+            class="w-full h-40 object-cover rounded-md"
+          />
+          <div class="mt-4">
+            <h3 class="text-lg font-semibold">Standard Room</h3>
+            <p class="text-sm text-gray-600">Adults: 2 • Size: 50ft²</p>
+            <p class="mt-2 text-green-500 font-bold">€29 per night</p>
+            <button
+              class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Room Card 3 -->
+      <div class="room-card transition-transform ease-in-out duration-500">
+        <div class="rounded-lg shadow-md p-4" style="background-color: #d6b56f">
+          <img
+            src="/5.jpg"
+            alt="Double Room"
+            class="w-full h-40 object-cover rounded-md"
+          />
+          <div class="mt-4">
+            <h3 class="text-lg font-semibold">Double Room</h3>
+            <p class="text-sm text-gray-600">Adults: 2 • Size: 35ft²</p>
+            <p class="mt-2 text-green-500 font-bold">€39 per night</p>
+            <button
+              class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Additional Room Cards (up to 10) -->
+      <div class="room-card transition-transform ease-in-out duration-500">
+        <div class="rounded-lg shadow-md p-4" style="background-color: #d6b56f">
+          <img
+            src="/4.jpg"
+            alt="Classic Room"
+            class="w-full h-40 object-cover rounded-md"
+          />
+          <div class="mt-4">
+            <h3 class="text-lg font-semibold">Classic Room</h3>
+            <p class="text-sm text-gray-600">Adults: 3 • Size: 35ft²</p>
+            <p class="mt-2 text-green-500 font-bold">€35 per night</p>
+            <button
+              class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat for remaining 10 rooms -->
+    <div class="mt-96">
+      <style>
+        /* Adding a custom background image with a gradient overlay */
+        .footer-bg {
+          background-image: url(/0389815740.jpg); /* Replace with your footer background image */
+          background-size: cover;
+          background-position: center;
+          position: relative;
+        }
+
+        .overlay {
+          background-color: rgba(
+            150,
+            134,
+            13,
+            0.479
+          ); /* Dark blue overlay with opacity */
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      </style>
+      <!-- Footer Section with Background Image and Overlay -->
+      <footer class="footer-bg h-auto relative">
+        <!-- Dark Blue Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Footer Content -->
+        <div
+          class="relative py-10 text-gray-300 container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <!-- Logo and Description -->
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-4">Kinsley</h2>
+            <p class="leading-loose text-white">
+              Sequi dolores ratione eos eveniet provident soluta. Omnis nesciunt
+              sit eos at, eius voluptatum rem corporis. Doloremque labore
+              assumenda explicabo vel!
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Menu Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Menu</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Home</a></li>
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Rooms</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet Kinsley Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Meet Kinsley</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Gallery</a></li>
+              <li><a href="#" class="hover:underline">Menu</a></li>
+              <li><a href="#" class="hover:underline">Restaurant</a></li>
+            </ul>
+          </div>
+
+          <!-- Instagram Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Instagram</h3>
+            <div class="grid grid-cols-3 gap-2">
+              <!-- Replace # with image links -->
+              <img
+                src="/insta 1.jpg"
+                alt="Instagram 1"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 2.jpg"
+                alt="Instagram 2"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta.jpg"
+                alt="Instagram 3"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 3.jpg"
+                alt="Instagram 4"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 4.jpg"
+                alt="Instagram 5"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 5.jpg"
+                alt="Instagram 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div
+          class="relative container mx-auto px-4 mt-8 border-t border-white pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-sm text-white">
+            &copy; 2024 Apricus. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+
+      <!-- Font Awesome Icons for Social Media (Include this in your project if needed) -->
+      <script
+        src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
