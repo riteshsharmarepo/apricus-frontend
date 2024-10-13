@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+
+    <title>Kinsley Resort</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- For using FontAwesome icons -->
+  </head>
+  <body class="font-sans bg-apricus">
+    <!-- Navbar -->
+    <div style="background-color: #c68d07">
+      <nav class="flex justify-between items-center p-6 shadow-md">
+        <div class="text-2xl font-bold">Kinsley</div>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="text-black hover:text-blue-500">Home</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">About</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">Rooms</a></li>
+          <li>
+            <a href="#" class="text-black hover:text-blue-500">Restaurant</a>
+          </li>
+          <li><a href="#" class="text-black hover:text-blue-500">Blog</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">Shop</a></li>
+          <li>
+            <a href="#" class="text-black hover:text-blue-500">Contact</a>
+          </li>
+        </ul>
+        <a href="#" class="px-4 py-2 bg-white text-black rounded-lg"
+          >Book now</a
+        >
+      </nav>
+    </div>
+    <style>
+      /* Background image for the section */
+      .background-image {
+        background-image: url("/0389815740.jpg"); /* Replace this with the correct image path */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+      }
+    </style>
+    <!-- Main container with background -->
+    <div class="background-image relative flex items-center justify-center">
+      <!-- Overlay for low-opacity background color on the image -->
+      <div class="absolute inset-0 bg-teal-900 opacity-50"></div>
+
+      <!-- Content inside the background -->
+      <div
+        class="relative z-10 text-center text-white px-4 md:px-8 lg:px-16 max-w-4xl"
+      >
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          SHIVALIK HILLS MUSSOORIE
+        </h1>
+      </div>
+    </div>
+    <style>
+      /* Slider Custom Styles */
+      .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider img {
+        min-width: 100%;
+        border-radius: 0.75rem;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+    </style>
+    <!-- Main Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Title -->
+        <h1 class="text-4xl font-bold text-center text-black mb-10">
+          SHIVALIK HILLS MUSSOORIE
+        </h1>
+
+        <!-- Card with Image Slider and Text -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-center md:items-start"
+        >
+          <!-- Image Slider -->
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <div class="slider-container">
+              <div class="slider">
+                <img src="/1.jpg" alt="Bliss Ganga 1" />
+                <img src="/2.jpg" alt="Bliss Ganga 2" />
+                <img src="/3.jpg" alt="Bliss Ganga 3" />
+                <img src="/4.jpg" />
+              </div>
+              <!-- Prev and Next buttons -->
+              <button class="prev" onclick="prevSlide()">&#10094;</button>
+              <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="md:w-1/2 md:pl-10">
+            <p class="text-gray-700 mb-4">
+              Shivalik Mussoorie Hills is a comfortable accommodation in
+              Mussoorie situated close to Mall Road (0.5 km). As a value added
+              service, guests can avail of complimentary Wi-Fi and breakfast
+              during their stay. The Hotel has well-maintained and comfortable
+              rooms.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Each room is equipped with conveniences like tea-coffee maker,
+              wake-up call,drinking water and attached bathroom with hot and
+              cold water. Shivalik Mussoorie Hills provides various facilities
+              that include Room service, car rental, medical assistance and
+              power back-up. Travel desk and front desk are also offered for the
+              convenience of the guests. The Shivalik Mussoorie Hills in
+              Mussoorie is accessible via travel hub such as Picture Palace Bus
+              Stand (0.22 km).
+            </p>
+            <p class="text-gray-700">
+              The closest airport to this property is Jolly Grand Airport (58
+              km). Places worth a visit include Picture Palace (0.1 km) and
+              Jabarkhet Nature Reserve (5 km). Guest can dine-in at the
+              multi-cuisine restaurant within the premises. also the Picture
+              Palace is nearby the hotel What people love the most about this
+              property is its great location and hospitality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript for Slider -->
+    <script>
+      let currentSlide = 0;
+
+      function showSlide(slideIndex) {
+        const slides = document.querySelectorAll(".slider img");
+        const totalSlides = slides.length;
+
+        if (slideIndex >= totalSlides) currentSlide = 0;
+        if (slideIndex < 0) currentSlide = totalSlides - 1;
+
+        const newTransformValue = `translateX(-${currentSlide * 100}%)`;
+        document.querySelector(".slider").style.transform = newTransformValue;
+      }
+
+      function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+
+      // Initial call to show the first slide
+      showSlide(currentSlide);
+    </script>
+    <style>
+      /* Slider Custom Styles */
+      .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 0.75rem;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider img {
+        min-width: 100%;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+    </style>
+    <!-- Main Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Title -->
+        <h1 class="text-4xl font-bold text-center text-black mb-10">Rooms</h1>
+
+        <!-- Rooms Card -->
+        <div class="bg-white shadow-lg rounded-lg p-6 mb-10">
+          <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+            Room Categories
+          </h2>
+          <!-- Room Categories Table -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div class="bg-gray-50 p-4 rounded-lg shadow">
+              <h3 class="text-lg font-bold text-gray-700">Executive Rooms</h3>
+              <p class="text-gray-600">No. of Rooms: 25</p>
+              <p class="text-gray-600">Approx. Room Size: 175 Sq. Ft</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow">
+              <h3 class="text-lg font-bold text-gray-700">Premium Rooms</h3>
+              <p class="text-gray-600">No. of Rooms: 18</p>
+              <p class="text-gray-600">Approx. Room Size: 252 Sq. Ft.</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow">
+              <h3 class="text-lg font-bold text-gray-700">Family Rooms</h3>
+              <p class="text-gray-600">No. of Rooms: 03</p>
+              <p class="text-gray-600">Approx. Room Size: 314 Sq. Ft.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Slider Card -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h2 class="text-2xl font-semibold mb-6 text-gray-800 text-center">
+            Room Gallery
+          </h2>
+          <!-- Image Slider -->
+          <div class="slider-container">
+            <div class="slider">
+              <img src="/11.jpg" alt="Room Image 1" />
+              <img src="/22.jpg" alt="Room Image 2" />
+              <img src="/33.jpg" alt="Room Image 3" />
+            </div>
+            <!-- Prev and Next buttons -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript for Slider -->
+    <script>
+      let currentSlide = 0;
+
+      function showSlide(slideIndex) {
+        const slides = document.querySelectorAll(".slider img");
+        const totalSlides = slides.length;
+
+        if (slideIndex >= totalSlides) currentSlide = 0;
+        if (slideIndex < 0) currentSlide = totalSlides - 1;
+
+        const newTransformValue = `translateX(-${currentSlide * 100}%)`;
+        document.querySelector(".slider").style.transform = newTransformValue;
+      }
+
+      function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+
+      // Initial call to show the first slide
+      showSlide(currentSlide);
+    </script>
+    <style>
+      .card {
+        background: #fff;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-icon {
+        color: #34d399; /* Updated color to green for Swimming Pool and Game Zone */
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover .card-icon {
+        transform: scale(1.1);
+      }
+    </style>
+
+    <!-- Facilities Section -->
+    <section class="py-16 mb-30">
+      <div class="container mx-auto px-6">
+        <div class="card p-8 rounded-lg text-center">
+          <h1 class="text-3xl font-bold text-gray-800 mb-8">Facilities</h1>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Swimming Pool Card -->
+            <div class="card p-8 rounded-lg text-center">
+              <i class="fas fa-swimmer fa-3x card-icon mb-6"></i>
+              <!-- Swimming Pool Icon -->
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                Swimming Pool
+              </h2>
+              <p class="text-gray-600">
+                Dive into our stunning outdoor swimming pool, where you can
+                enjoy a refreshing swim or lounge by the poolside with a
+                cocktail in hand. Perfect for relaxation or an invigorating dip.
+              </p>
+            </div>
+
+            <!-- Game Zone Card -->
+            <div class="card p-8 rounded-lg text-center">
+              <i class="fas fa-gamepad fa-3x card-icon mb-6"></i>
+              <!-- Game Zone Icon -->
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">Game Zone</h2>
+              <p class="text-gray-600">
+                Explore our exciting Game Zone, equipped with the latest gaming
+                consoles, arcade games, and activities for guests of all ages.
+                Whether you're looking for friendly competition or just fun,
+                this space offers something for everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .facility-card {
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .facility-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .facility-icon {
+        color: #f97316; /* Orange color */
+        transition: transform 0.3s ease;
+      }
+
+      .facility-card:hover .facility-icon {
+        transform: rotate(15deg);
+      }
+    </style>
+
+    <!-- Amenities Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Title -->
+        <h1 class="text-4xl font-bold text-center text-orange-600 mb-10">
+          Amenities
+        </h1>
+
+        <!-- Amenities Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Amenity Card -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-parking fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Free Parking</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-fire fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">BBQ Facilities</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-shield-alt fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">24-Hour Security</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-concierge-bell fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">24-Hour Front Desk</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-cut fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Beauty Salon</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-spa fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Body Treatment</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-store fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Boutique</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-newspaper fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Free Newspaper On Request</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-briefcase fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Board Room</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-utensils fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Catering Services</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-wifi fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">
+              High-speed WIFI Connectivity
+            </p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-tshirt fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Laundry Service</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-tshirt fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Dry Cleaning Paid</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-shuttle-van fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Airport Shuttle Paid</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-newspaper fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Free Newspaper On Request</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-bell fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Front Desk</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-car fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Free Parking</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-broom fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Housekeeping Daily</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-spa fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Massage Services</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-tshirt fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Guest Laundromat</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-swimmer fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Outdoor Swimming Pool</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-utensils fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Restaurant</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-hands-helping fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Halal Food</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-cocktail fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Pool Snack Bar</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-shuttle-van fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Transportation Services</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-heart fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Wedding Services</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-phone fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Phone Service</p>
+          </div>
+
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-video fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">
+              Video Cameras for Security in Public Areas
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden;
+      }
+
+      .gallery img {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Custom scrollbar styling */
+      .gallery {
+        scrollbar-width: thin;
+        scrollbar-color: #ccc transparent;
+      }
+
+      .gallery::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .gallery::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 10px;
+      }
+
+      .gallery::-webkit-scrollbar-track {
+        background: transparent;
+      }
+    </style>
+    <style>
+      .gallery img {
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      /* Hidden class to hide inactive images */
+      .hidden {
+        opacity: 0;
+        position: absolute;
+      }
+
+      /* Active class for the visible image */
+      .active {
+        opacity: 1;
+        position: relative;
+      }
+    </style>
+    <!-- Gallery and Video Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Main Card -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row"
+        >
+          <!-- Left: Image Gallery -->
+          <div class="w-full md:w-1/2 p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Image Gallery</h2>
+            <div class="relative w-full h-96 overflow-hidden">
+              <!-- Image placeholders -->
+              <img
+                src="/4.jpg"
+                class="gallery-img active rounded-lg"
+                alt="Image 1"
+              />
+              <img
+                src="/1.jpg"
+                class="gallery-img hidden rounded-lg"
+                alt="Image 2"
+              />
+              <img
+                src="/11.jpg"
+                class="gallery-img hidden rounded-lg"
+                alt="Image 3"
+              />
+              <img
+                src="/2.jpg"
+                class="gallery-img hidden rounded-lg"
+                alt="Image 4"
+              />
+              <img
+                src="/3198411ccd.jpg"
+                class="gallery-img hidden rounded-lg"
+                alt="Image 5"
+              />
+            </div>
+          </div>
+
+          <!-- Right: Video Section -->
+          <div class="w-full md:w-1/2 p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Video</h2>
+            <div class="relative w-full h-96">
+              <iframe
+                class="w-full h-full rounded-lg"
+                src="https://www.youtube.com/watch?v=vXWXTEGMn9I"
+                title="YouTube Video Player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // JavaScript to handle image sliding
+      const images = document.querySelectorAll(".gallery-img");
+      let currentImageIndex = 0;
+
+      function showNextImage() {
+        images[currentImageIndex].classList.remove("active");
+        images[currentImageIndex].classList.add("hidden");
+
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+
+        images[currentImageIndex].classList.remove("hidden");
+        images[currentImageIndex].classList.add("active");
+      }
+
+      // Automatically change the image every 3 seconds
+      setInterval(showNextImage, 3000);
+    </script>
+    <!-- Contact Us Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Main Contact Us Card -->
+        <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+          <!-- Title -->
+          <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+            Contact Us
+          </h2>
+
+          <!-- Contact Information Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Address Card -->
+            <div
+              class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+            >
+              <div class="text-orange-500 text-3xl mb-4">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-700 mb-2">Address</h3>
+              <p class="text-gray-600">
+                Madanpur Bora Chhoi Ramnagar, 244715 Rāmnagar, India
+              </p>
+            </div>
+
+            <!-- Phone Card -->
+            <div
+              class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+            >
+              <div class="text-orange-500 text-3xl mb-4">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-700 mb-2">Phone</h3>
+              <p class="text-gray-600">Mob: 8956593947</p>
+              <p class="text-gray-600">Phone Landline - 8788981627</p>
+            </div>
+
+            <!-- Email Card -->
+            <div
+              class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+            >
+              <div class="text-orange-500 text-3xl mb-4">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-700 mb-2">Email</h3>
+              <p class="text-gray-600">crs@apricushotels.com</p>
+            </div>
+
+            <!-- Website Card -->
+            <div
+              class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+            >
+              <div class="text-orange-500 text-3xl mb-4">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-700 mb-2">Website</h3>
+              <p class="text-gray-600">
+                <a
+                  href="https://apricushotels.com"
+                  target="_blank"
+                  class="text-blue-500 hover:underline"
+                >
+                  https://apricushotels.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <div class="mapouter mb-70">
+      <div class="gmap_canvas">
+        <iframe
+          width="100%"
+          height="500"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=On%20National%20Highway-58,%20Badrinath%20Road,%20near%20Laxman%20Jhula%20Chowk,%20old%20police%20station,%20Tapovan%20Rishikesh,%20Uttarakhand%20%E2%80%93%20249192&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+        >
+        </iframe>
+        <a href="https://123movies-i.net"></a>
+        <br />
+        <style>
+          .mapouter {
+            position: relative;
+            text-align: right;
+            height: 500px;
+            width: 100%;
+          }
+          .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 500px;
+            width: 100%;
+          }
+        </style>
+        <a href="https://www.embedgooglemap.net"></a>
+      </div>
+    </div>
+    <div class="mt-5">
+      <style>
+        /* Adding a custom background image with a gradient overlay */
+        .footer-bg {
+          background-image: url(/0389815740.jpg); /* Replace with your footer background image */
+          background-size: cover;
+          background-position: center;
+          position: relative;
+        }
+
+        .overlay {
+          background-color: rgba(
+            150,
+            134,
+            13,
+            0.479
+          ); /* Dark blue overlay with opacity */
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      </style>
+      <!-- Footer Section with Background Image and Overlay -->
+      <footer class="footer-bg h-auto relative">
+        <!-- Dark Blue Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Footer Content -->
+        <div
+          class="relative py-10 text-gray-300 container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <!-- Logo and Description -->
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-4">Kinsley</h2>
+            <p class="leading-loose text-white">
+              Sequi dolores ratione eos eveniet provident soluta. Omnis nesciunt
+              sit eos at, eius voluptatum rem corporis. Doloremque labore
+              assumenda explicabo vel!
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Menu Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Menu</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Home</a></li>
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Rooms</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet Kinsley Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Meet Kinsley</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Gallery</a></li>
+              <li><a href="#" class="hover:underline">Menu</a></li>
+              <li><a href="#" class="hover:underline">Restaurant</a></li>
+            </ul>
+          </div>
+
+          <!-- Instagram Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Instagram</h3>
+            <div class="grid grid-cols-3 gap-2">
+              <!-- Replace # with image links -->
+              <img
+                src="/insta 1.jpg"
+                alt="Instagram 1"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 2.jpg"
+                alt="Instagram 2"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta.jpg"
+                alt="Instagram 3"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 3.jpg"
+                alt="Instagram 4"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 4.jpg"
+                alt="Instagram 5"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 5.jpg"
+                alt="Instagram 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <divae?.,mn 
+          class="relative container mx-auto px-4 mt-8 border-t border-white pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-sm text-white">
+            &copy; 2024 Apricus. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+
+      <!-- Font Awesome Icons for Social Media (Include this in your project if needed) -->
+      <script
+        src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
