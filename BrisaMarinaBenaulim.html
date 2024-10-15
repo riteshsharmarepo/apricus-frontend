@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+
+    <title>Kinsley Resort</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- For using FontAwesome icons -->
+  </head>
+  <body class="font-sans bg-apricus">
+    <!-- Navbar -->
+    <div style="background-color: #c68d07">
+      <nav class="flex justify-between items-center p-6 shadow-md">
+        <div class="text-2xl font-bold">Kinsley</div>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="text-black hover:text-blue-500">Home</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">About</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">Rooms</a></li>
+          <li>
+            <a href="#" class="text-black hover:text-blue-500">Restaurant</a>
+          </li>
+          <li><a href="#" class="text-black hover:text-blue-500">Blog</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">Shop</a></li>
+          <li>
+            <a href="#" class="text-black hover:text-blue-500">Contact</a>
+          </li>
+        </ul>
+        <a href="#" class="px-4 py-2 bg-white text-black rounded-lg"
+          >Book now</a
+        >
+      </nav>
+    </div>
+    <style>
+      /* Background image for the section */
+      .background-image {
+        background-image: url("/0389815740.jpg"); /* Replace this with the correct image path */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+      }
+    </style>
+    <!-- Main container with background -->
+    <div class="background-image relative flex items-center justify-center">
+      <!-- Overlay for low-opacity background color on the image -->
+      <div class="absolute inset-0 bg-teal-900 opacity-50"></div>
+
+      <!-- Content inside the background -->
+      <div
+        class="relative z-10 text-center text-white px-4 md:px-8 lg:px-16 max-w-4xl"
+      >
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          experience luxury @ Brisa Marina Benaulim
+        </h1>
+
+        <!-- Buttons with border and text, changing on hover -->
+      </div>
+    </div>
+    <style>
+      /* Slider Custom Styles */
+      .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider img {
+        min-width: 100%;
+        border-radius: 0.75rem;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+    </style>
+    <!-- Main Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Title -->
+        <h1 class="text-4xl font-bold text-center text-black mb-10">
+          Apricus Brisa Marina Benaulim – South Goa
+        </h1>
+
+        <!-- Card with Image Slider and Text -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-center md:items-start"
+        >
+          <!-- Image Slider -->
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <div class="slider-container">
+              <div class="slider">
+                <img src="/1.jpg" alt="Bliss Ganga 1" />
+                <img src="/2.jpg" alt="Bliss Ganga 2" />
+                <img src="/3.jpg" alt="Bliss Ganga 3" />
+                <img src="/4.jpg" />
+              </div>
+              <!-- Prev and Next buttons -->
+              <button class="prev" onclick="prevSlide()">&#10094;</button>
+              <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="md:w-1/2 md:pl-10">
+            <p class="text-gray-700 mb-4">
+              Beautiful & breathtaking at the Apricus Brisa Marina. We are open
+              to welcome our guests. Experience a luxurious stay at 393/6 B,
+              Benaulim South Goa – 403716. 11 Luxurious 4 & 3 bedroom Villas
+              property nearly 250 metres away from famous Benaulim, Beach, south
+              Goa
+            </p>
+            <p class="text-gray-700 mb-4">
+              Beautiful & breathtaking at the Apricus Brisa Marina. We are open
+              to welcome our guests. Experience a luxurious stay at 393/6 B,
+              Benaulim South Goa – 403716. 11 Luxurious 4 & 3 bedroom Villas
+              property nearly 250 metres away from famous Benaulim, Beach, south
+              Goa Apricus Brisa Marina is luxurious property is the best
+              combination of relaxed Villas and trend setting environmental
+              practices. This place boasts of 11 well-furnished 3 & 4 bedroom
+              Villa’s placed along the wonderful view to fairfield and still
+              pristine 250 metres away from Benaulim beach, close to
+              supermarkets & local markets. Smart home with cutting edge
+              automation. Spread out walk in closet. The floor to ceiling
+              windows overlooking the natural surroundings. This place is 7 kms
+              from Margao railway station, 25 kms from Goa Dabolim airport and
+              39 Kms from Panjim, Capital of Goa. All Bedrooms en-suite bathroom
+              with hot & cold water & free access to Wi-Fi
+            </p>
+            <p class="text-gray-700"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript for Slider -->
+    <script>
+      let currentSlide = 0;
+
+      function showSlide(slideIndex) {
+        const slides = document.querySelectorAll(".slider img");
+        const totalSlides = slides.length;
+
+        if (slideIndex >= totalSlides) currentSlide = 0;
+        if (slideIndex < 0) currentSlide = totalSlides - 1;
+
+        const newTransformValue = `translateX(-${currentSlide * 100}%)`;
+        document.querySelector(".slider").style.transform = newTransformValue;
+      }
+
+      function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+
+      // Initial call to show the first slide
+      showSlide(currentSlide);
+    </script>
+    <!-- Image Hover Gallery with Title -->
+    <div
+      class="container"
+      style="display: flex; justify-content: center; padding: 20px"
+    >
+      <div
+        class="bg-white shadow-lg rounded-lg overflow-hidden"
+        style="position: relative; width: 80%; max-width: 800px; height: 600px"
+      >
+        <!-- Title Overlay -->
+        <div
+          class="title-overlay"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            z-index: 10;
+          "
+        >
+          <h2 class="text-2xl font-semibold text-white text-center">
+            Room Gallery
+          </h2>
+        </div>
+
+        <!-- Image Display -->
+        <div
+          class="image-container"
+          style="
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+          "
+        >
+          <img
+            src="/11.jpg"
+            alt="Room Image 1"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: absolute;
+              transition: opacity 0.5s;
+            "
+            class="active"
+          />
+          <img
+            src="/22.jpg"
+            alt="Room Image 2"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: absolute;
+              opacity: 0;
+              transition: opacity 0.5s;
+            "
+          />
+          <img
+            src="/33.jpg"
+            alt="Room Image 3"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: absolute;
+              opacity: 0;
+              transition: opacity 0.5s;
+            "
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Image Change on Hover -->
+    <script>
+      let currentIndex = 0;
+      let hoverInterval;
+
+      const images = document.querySelectorAll(".image-container img");
+
+      // Function to change the image
+      function changeImage() {
+        // Set all images to be invisible
+        images.forEach((img, index) => {
+          img.style.opacity = index === currentIndex ? "1" : "0";
+        });
+
+        // Increment the index to show the next image
+        currentIndex = (currentIndex + 1) % images.length;
+      }
+
+      // Start image rotation on hover
+      document
+        .querySelector(".image-container")
+        .addEventListener("mouseenter", function () {
+          hoverInterval = setInterval(changeImage, 1000); // Change every 1 second
+        });
+
+      // Stop image rotation when hover ends
+      document
+        .querySelector(".image-container")
+        .addEventListener("mouseleave", function () {
+          clearInterval(hoverInterval);
+        });
+    </script>
+    <!-- Dining Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Main Dining Card -->
+        <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+          <!-- Title -->
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+            Dining
+          </h2>
+
+          <!-- Description -->
+          <p class="text-gray-600 mb-6 text-center">
+            Traditionalists at heart, we at Apricus Brisa Marina Benaulim the
+            wow to be home grown. Ambrosia, a multi-cuisine restaurant, is our
+            way of introducing India to the world. Make Marigold the center of
+            your celebrations, tantalize your taste buds, enjoy your special
+            moments, and cherish the memories all your life.
+          </p>
+
+          <!-- Image Gallery -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- Image 1 -->
+            <div class="relative group">
+              <img
+                src="/1.jpg"
+                alt="Dining Image 1"
+                class="rounded-lg transition duration-300 transform group-hover:scale-110"
+              />
+            </div>
+            <!-- Image 2 -->
+            <div class="relative group">
+              <img
+                src="/0389815740.jpg"
+                alt="Dining Image 2"
+                class="rounded-lg transition duration-300 transform group-hover:scale-110"
+              />
+            </div>
+            <!-- Image 3 -->
+            <div class="relative group">
+              <img
+                src="/e75e876fc3.jpg"
+                alt="Dining Image 3"
+                class="rounded-lg transition duration-300 transform group-hover:scale-110"
+              />
+            </div>
+            <!-- Image 4 -->
+            <div class="relative group">
+              <img
+                src="/22.jpg"
+                alt="Dining Image 4"
+                class="rounded-lg transition duration-300 transform group-hover:scale-110"
+              />
+            </div>
+            <!-- Image 5 -->
+            <div class="relative group">
+              <img
+                src="/3198411ccd.jpg"
+                alt="Dining Image 5"
+                class="rounded-lg transition duration-300 transform group-hover:scale-110"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .facility-card {
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .facility-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .facility-icon {
+        color: #f97316; /* Orange color */
+        transition: transform 0.3s ease;
+      }
+
+      .facility-card:hover .facility-icon {
+        transform: rotate(15deg);
+      }
+    </style>
+
+    <!-- Facilities Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <!-- Title -->
+        <h1 class="text-4xl font-bold text-center text-orange-600 mb-10">
+          Facilities
+        </h1>
+
+        <!-- Facilities Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Facility Card 1: Air Conditioned -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-snowflake fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Air Conditioned</p>
+          </div>
+
+          <!-- Facility Card 2: Complimentary WiFi -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-wifi fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Complimentary WiFi</p>
+          </div>
+
+          <!-- Facility Card 3: Private Pool -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-swimming-pool fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Private Pool</p>
+          </div>
+
+          <!-- Facility Card 4: Private Balcony -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-check-circle fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Private Balcony</p>
+          </div>
+
+          <!-- Facility Card 5: Car Parking -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-car fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Car Parking</p>
+          </div>
+
+          <!-- Facility Card 6: House Keeping -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-broom fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">House Keeping</p>
+          </div>
+
+          <!-- Facility Card 7: Balconies -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-home fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Balconies</p>
+          </div>
+
+          <!-- Facility Card 8: Smart TV -->
+          <div class="facility-card p-6 text-center rounded-lg">
+            <i class="fas fa-tv fa-2x facility-icon mb-4"></i>
+            <p class="text-gray-700 font-semibold">Smart TV</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .image-hover:hover {
+        transform: scale(1.05);
+      }
+    </style>
+    <div class="container mx-auto py-8">
+      <!-- Main Card Container -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden p-6">
+        <h1 class="text-center text-3xl font-bold mb-8">Gallery</h1>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Row 1 (2 large images) -->
+          <div class="col-span-2 row-span-2 overflow-hidden rounded-lg">
+            <img
+              src="/33.jpg"
+              alt="Large Image 1"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+          <div class="col-span-2 row-span-2 overflow-hidden rounded-lg">
+            <img
+              src="/3a5d5a6d83.jpg"
+              alt="Large Image 2"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+
+          <!-- Row 2 (4 smaller images) -->
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="/demo.png"
+              alt="Image 3"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="/98f14e37fe.jpg"
+              alt="Image 4"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="/671a67250a.jpg"
+              alt="Image 5"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="/3a5d5a6d83.jpg"
+              alt="Image 6"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+
+          <!-- Row 3 (2 large square images) -->
+          <div class="col-span-1 row-span-2 overflow-hidden rounded-lg">
+            <img
+              src="/22.jpg"
+              alt="Square Image 7"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+          <div class="col-span-1 row-span-2 overflow-hidden rounded-lg">
+            <img
+              src="/11.jpg"
+              alt="Square Image 8"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+
+          <!-- Row 4 (2 medium rectangle images) -->
+          <div class="col-span-2 overflow-hidden rounded-lg">
+            <img
+              src="/1.jpg"
+              alt="Medium Rectangle Image 9"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+          <div class="col-span-2 overflow-hidden rounded-lg">
+            <img
+              src="/3.jpg"
+              alt="Medium Rectangle Image 10"
+              class="w-full h-full object-cover image-hover transition duration-300 ease-in-out"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5">
+      <style>
+        /* Adding a custom background image with a gradient overlay */
+        .footer-bg {
+          background-image: url(/0389815740.jpg); /* Replace with your footer background image */
+          background-size: cover;
+          background-position: center;
+          position: relative;
+        }
+
+        .overlay {
+          background-color: rgba(
+            150,
+            134,
+            13,
+            0.479
+          ); /* Dark blue overlay with opacity */
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      </style>
+      <!-- Footer Section with Background Image and Overlay -->
+      <footer class="footer-bg h-auto relative">
+        <!-- Dark Blue Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Footer Content -->
+        <div
+          class="relative py-10 text-gray-300 container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <!-- Logo and Description -->
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-4">Kinsley</h2>
+            <p class="leading-loose text-white">
+              Sequi dolores ratione eos eveniet provident soluta. Omnis nesciunt
+              sit eos at, eius voluptatum rem corporis. Doloremque labore
+              assumenda explicabo vel!
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Menu Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Menu</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Home</a></li>
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Rooms</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet Kinsley Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Meet Kinsley</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Gallery</a></li>
+              <li><a href="#" class="hover:underline">Menu</a></li>
+              <li><a href="#" class="hover:underline">Restaurant</a></li>
+            </ul>
+          </div>
+
+          <!-- Instagram Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Instagram</h3>
+            <div class="grid grid-cols-3 gap-2">
+              <!-- Replace # with image links -->
+              <img
+                src="/insta 1.jpg"
+                alt="Instagram 1"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 2.jpg"
+                alt="Instagram 2"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta.jpg"
+                alt="Instagram 3"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 3.jpg"
+                alt="Instagram 4"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 4.jpg"
+                alt="Instagram 5"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 5.jpg"
+                alt="Instagram 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <divae?.,mn 
+          class="relative container mx-auto px-4 mt-8 border-t border-white pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-sm text-white">
+            &copy; 2024 Apricus. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+
+      <!-- Font Awesome Icons for Social Media (Include this in your project if needed) -->
+      <script
+        src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
