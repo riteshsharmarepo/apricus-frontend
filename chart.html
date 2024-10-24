@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+
+    <title>Kinsley Resort</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- For using FontAwesome icons -->
+  </head>
+  <body class="font-sans bg-apricus">
+    <!-- Navbar -->
+    <div style="background-color: #c68d07">
+      <nav class="flex justify-between items-center p-6 shadow-md">
+        <div class="text-2xl font-bold">Kinsley</div>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="text-black hover:text-blue-500">Home</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">About</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">Rooms</a></li>
+          <li>
+            <a href="#" class="text-black hover:text-blue-500">Restaurant</a>
+          </li>
+          <li><a href="#" class="text-black hover:text-blue-500">Blog</a></li>
+          <li><a href="#" class="text-black hover:text-blue-500">Shop</a></li>
+          <li>
+            <a href="#" class="text-black hover:text-blue-500">Contact</a>
+          </li>
+        </ul>
+        <a href="#" class="px-4 py-2 bg-white text-black rounded-lg"
+          >Book now</a
+        >
+      </nav>
+    </div>
+    <!-- Container for dashboard -->
+    <div class="container mx-auto p-4">
+      <!-- Top cards section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <!-- Card 1 -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg p-6 flex items-center justify-between"
+        >
+          <h2 class="text-lg font-semibold text-white">Total Hotels</h2>
+          <!-- Text changed to white -->
+          <span class="text-3xl font-bold text-white">3</span>
+          <!-- Text changed to white -->
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg p-6 flex items-center justify-between"
+        >
+          <h2 class="text-lg font-semibold text-white">Total Locations</h2>
+          <!-- Text changed to white -->
+          <span class="text-3xl font-bold text-white">3</span>
+          <!-- Text changed to white -->
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg p-6 flex items-center justify-between"
+        >
+          <h2 class="text-lg font-semibold text-white">Bookings</h2>
+          <!-- Text changed to white -->
+          <span class="text-3xl font-bold text-white">3</span>
+          <!-- Text changed to white -->
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg p-6 flex items-center justify-between"
+        >
+          <h2 class="text-lg font-semibold text-white">Contact</h2>
+          <!-- Text changed to white -->
+          <span class="text-3xl font-bold text-white">3</span>
+          <!-- Text changed to white -->
+        </div>
+      </div>
+
+      <!-- Bottom charts section -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <!-- Pie chart card -->
+        <div class="bg-gray-800 rounded-lg shadow-lg p-4">
+          <h2 class="text-lg font-semibold mb-4 text-white">
+            Pending vs Confirmed
+          </h2>
+          <!-- Text changed to white -->
+          <div class="w-64 h-64 mx-auto">
+            <!-- Smaller chart container -->
+            <canvas id="pieChart" width="250" height="250"></canvas>
+            <!-- Smaller canvas -->
+          </div>
+        </div>
+
+        <!-- Bar chart card -->
+        <div class="bg-gray-800 rounded-lg shadow-lg p-4">
+          <h2 class="text-lg font-semibold mb-4 text-white">
+            Contact Frequency
+          </h2>
+          <!-- Text changed to white -->
+          <div class="w-64 h-64 mx-auto">
+            <!-- Smaller chart container -->
+            <canvas id="barChart" width="250" height="250"></canvas>
+            <!-- Smaller canvas -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script to handle Pie Chart and Bar Chart using Chart.js -->
+    <script>
+      // Pie Chart
+      const pieCtx = document.getElementById("pieChart").getContext("2d");
+      const pieChart = new Chart(pieCtx, {
+        type: "pie",
+        data: {
+          labels: ["Pending", "Confirmed"],
+          datasets: [
+            {
+              label: "Status",
+              data: [30, 70], // Example data
+              backgroundColor: [
+                "#E11D48", // Pending (Red)
+                "#22C55E", // Confirmed (Green)
+              ],
+              hoverOffset: 4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: {
+                color: "white", // Legend text changed to white
+              },
+            },
+          },
+        },
+      });
+
+      // Bar Chart
+      const barCtx = document.getElementById("barChart").getContext("2d");
+      const barChart = new Chart(barCtx, {
+        type: "bar",
+        data: {
+          labels: ["Months", "Weeks", "Days"],
+          datasets: [
+            {
+              label: "Contacts",
+              data: [60, 80, 50], // Example data for the bars
+              backgroundColor: [
+                "#3B82F6", // Blue for Months
+                "#60A5FA", // Light blue for Weeks
+                "#93C5FD", // Lighter blue for Days
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: "white", // Y-axis labels changed to white
+              },
+            },
+            x: {
+              ticks: {
+                color: "white", // X-axis labels changed to white
+              },
+            },
+          },
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+      });
+    </script>
+      <div class="mt-5">
+      <style>
+        /* Adding a custom background image with a gradient overlay */
+        .footer-bg {
+          background-image: url(/9-scaled.jpg); /* Replace with your footer background image */
+          background-size: cover;
+          background-position: center;
+          position: relative;
+        }
+
+        .overlay {
+          background-color: rgba(
+            150,
+            134,
+            13,
+            0.479
+          ); /* Dark blue overlay with opacity */
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      </style>
+      <!-- Footer Section with Background Image and Overlay -->
+      <footer class="footer-bg h-auto relative">
+        <!-- Dark Blue Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Footer Content -->
+        <div
+          class="relative py-10 text-gray-300 container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <!-- Logo and Description -->
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-4">Kinsley</h2>
+            <p class="leading-loose text-white">
+              Sequi dolores ratione eos eveniet provident soluta. Omnis nesciunt
+              sit eos at, eius voluptatum rem corporis. Doloremque labore
+              assumenda explicabo vel!
+            </p>
+            <div class="flex mt-4 space-x-4">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Menu Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Menu</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Home</a></li>
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Rooms</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet Kinsley Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Meet Kinsley</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Gallery</a></li>
+              <li><a href="#" class="hover:underline">Menu</a></li>
+              <li><a href="#" class="hover:underline">Restaurant</a></li>
+            </ul>
+          </div>
+
+          <!-- Instagram Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Instagram</h3>
+            <div class="grid grid-cols-3 gap-2">
+              <!-- Replace # with image links -->
+              <img
+                src="/insta 1.jpg"
+                alt="Instagram 1"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 2.jpg"
+                alt="Instagram 2"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta.jpg"
+                alt="Instagram 3"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 3.jpg"
+                alt="Instagram 4"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 4.jpg"
+                alt="Instagram 5"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/insta 5.jpg"
+                alt="Instagram 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <divae?.,mn 
+          class="relative container mx-auto px-4 mt-8 border-t border-white pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-sm text-white">
+            &copy; 2024 Apricus. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+
+      <!-- Font Awesome Icons for Social Media (Include this in your project if needed) -->
+      <script
+        src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
