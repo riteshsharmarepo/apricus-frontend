@@ -39,12 +39,16 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- For using FontAwesome icons -->
+   
   </head>
   <body class="font-sans bg-apricus">
     <!-- Navbar -->
@@ -347,5 +351,32 @@
         crossorigin="anonymous"
       ></script>
     </div>
+    <body class="relative min-h-screen bg-gray-100">
+
+  <!-- Floating Action Buttons Container -->
+  <div class="fixed bottom-4 w-full flex justify-between items-center px-4">
+    
+    <!-- Testimonial Button on the Left -->
+    <a href="/testimonial.html" class="flex items-center justify-center bg-blue-500 text-white rounded-full w-14 h-14 shadow-lg hover:bg-blue-600 transition duration-300">
+      <!-- Testimonial Icon -->
+      <i class="fas fa-comment-dots text-2xl"></i>
+    </a>
+
+    <!-- WhatsApp Button on the Right -->
+    <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="relative group flex items-center justify-center bg-green-500 text-white rounded-full w-14 h-14 shadow-lg hover:bg-green-600 transition duration-300">
+      <!-- WhatsApp Icon -->
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.993.517 3.868 1.45 5.522L2 22l4.478-1.45A9.965 9.965 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm-.009 17.327a7.972 7.972 0 01-4.291-1.258l-.307-.188-2.657.861.894-2.594-.178-.284a8.024 8.024 0 01-1.258-4.31c0-4.435 3.607-8.043 8.042-8.043s8.043 3.608 8.043 8.043-3.608 8.042-8.043 8.042zm3.485-5.59c-.191-.096-1.125-.555-1.299-.618-.173-.062-.3-.096-.427.096-.127.191-.491.618-.602.745-.11.127-.22.143-.409.048-.19-.095-.802-.295-1.528-.941-.565-.503-.946-1.127-1.057-1.317-.11-.191-.012-.295.084-.39.087-.086.191-.223.287-.334.095-.11.127-.191.191-.318.063-.127.031-.239-.015-.334-.048-.095-.428-1.027-.587-1.411-.153-.366-.309-.317-.427-.323-.11-.004-.239-.004-.369-.004-.128 0-.334.047-.51.239-.173.191-.672.655-.672 1.6s.689 1.853.785 1.982c.095.127 1.355 2.074 3.285 2.907.46.198.819.316 1.1.405.462.147.883.127 1.216.078.371-.055 1.125-.459 1.283-.901.158-.443.158-.822.111-.902-.047-.08-.173-.127-.364-.223z"/>
+      </svg>
+      <!-- Tooltip -->
+      <span class="absolute bottom-16 opacity-0 group-hover:opacity-100 bg-gray-900 text-white text-xs font-semibold py-1 px-2 rounded transition duration-300">
+        Chat with us
+      </span>
+    </a>
+
+  </div>
+
+</body>
+    
   </body>
 </html>
