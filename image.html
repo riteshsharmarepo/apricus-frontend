@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .star-rating {
+        display: inline-flex;
+        gap: 5px;
+        cursor: pointer;
+      }
+
+      .star-rating .star {
+        color: #ffd700;
+        font-size: 1.2rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      /* Fullscreen modal for image */
+      .fullscreen-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .fullscreen-modal img {
+        max-width: 95%;
+        max-height: 95%;
+      }
+
+      .close-btn,
+      .prev-btn,
+      .next-btn {
+        position: absolute;
+        font-size: 2.5rem;
+        color: white;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .close-btn {
+        top: 20px;
+        right: 20px;
+      }
+
+      .prev-btn {
+        left: 20px;
+      }
+
+      .next-btn {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Single Big Card for All 10 Images -->
+    <div class="container mx-auto py-10">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6">
+        <h1 class="text-2xl font-semibold mb-6">Top 10 Attractions</h1>
+
+        <!-- Image Grid inside the Big Card -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
+        >
+          <!-- Image 1: London Big Ben (col-span-2 for large width) -->
+          <div class="col-span-1 md:col-span-2">
+            <img
+              src="/22.jpg"
+              alt="London Big Ben"
+              class="w-full h-48 object-cover cursor-pointer"
+              onclick="openImageModal(0)"
+            />
+            <h2 class="text-lg font-semibold mt-2">London</h2>
+            <p class="text-gray-500">Big Ben</p>
+            <div class="star-rating mt-2">
+              <span class="star" data-value="1" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="2" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="3" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="4" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="5" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+            </div>
+          </div>
+
+          <!-- Image 2: Pisa Tower (regular size) -->
+          <div class="col-span-1">
+            <img
+              src="/3a5d5a6d83.jpg"
+              alt="Pisa Tower"
+              class="w-full h-48 object-cover cursor-pointer"
+              onclick="openImageModal(1)"
+            />
+            <h2 class="text-lg font-semibold mt-2">Pisa</h2>
+            <p class="text-gray-500">Pisa Tower</p>
+            <div class="star-rating mt-2">
+              <span class="star" data-value="1" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="2" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="3" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="4" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="5" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+            </div>
+          </div>
+
+          <!-- Image 3: Paris Eiffel Tower (col-span-2 for large height) -->
+          <div class="col-span-1 md:col-span-2">
+            <img
+              src="/3a5d5a6d83.jpg"
+              alt="Paris Eiffel Tower"
+              class="w-full h-48 object-cover cursor-pointer"
+              onclick="openImageModal(2)"
+            />
+            <h2 class="text-lg font-semibold mt-2">Paris</h2>
+            <p class="text-gray-500">Eiffel Tower</p>
+            <div class="star-rating mt-2">
+              <span class="star" data-value="1" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="2" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="3" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="4" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="5" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+            </div>
+          </div>
+
+          <!-- Image 4: Rome Colosseum (regular size) -->
+          <div class="col-span-1">
+            <img
+              src="/33.jpg"
+              alt="Rome Colosseum"
+              class="w-full h-48 object-cover cursor-pointer"
+              onclick="openImageModal(3)"
+            />
+            <h2 class="text-lg font-semibold mt-2">Rome</h2>
+            <p class="text-gray-500">Colosseum</p>
+            <div class="star-rating mt-2">
+              <span class="star" data-value="1" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="2" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="3" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="4" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="5" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+            </div>
+          </div>
+
+          <!-- Image 5: New York Statue of Liberty (regular size) -->
+          <div class="col-span-1">
+            <img
+              src="/12-scaled.jpg"
+              alt="New York Statue of Liberty"
+              class="w-full h-48 object-cover cursor-pointer"
+              onclick="openImageModal(4)"
+            />
+            <h2 class="text-lg font-semibold mt-2">New York</h2>
+            <p class="text-gray-500">Statue of Liberty</p>
+            <div class="star-rating mt-2">
+              <span class="star" data-value="1" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="2" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="3" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="4" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="5" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+            </div>
+          </div>
+
+          <!-- Image 6: Sydney Opera House (regular size) -->
+          <div class="col-span-1">
+            <img
+              src="/1.jpg"
+              alt="Sydney Opera House"
+              class="w-full h-48 object-cover cursor-pointer"
+              onclick="openImageModal(5)"
+            />
+            <h2 class="text-lg font-semibold mt-2">Sydney</h2>
+            <p class="text-gray-500">Sydney Opera House</p>
+            <div class="star-rating mt-2">
+              <span class="star" data-value="1" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="2" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="3" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="4" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+              <span class="star" data-value="5" onclick="rateStar(this)"
+                >&#9733;</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fullscreen Image Modal with Previous and Next buttons -->
+    <div id="imageModal" class="fullscreen-modal hidden">
+      <span class="close-btn" onclick="closeImageModal()">&#10006;</span>
+      <span class="prev-btn" onclick="prevImage()">&#10094;</span>
+      <span class="next-btn" onclick="nextImage()">&#10095;</span>
+      <img id="modalImage" src="" alt="Full Image" />
+    </div>
+
+    <script>
+      let currentImageIndex = 0;
+      const images = [
+        "./b1.jpg",
+        "./b2.jpg ",
+        "./birsa d 3.jpg",
+        "./bar.jpg",
+        "./b7.jpg",
+        "./b9.jpg",
+      ];
+
+      function openImageModal(index) {
+        currentImageIndex = index;
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = images[currentImageIndex];
+        document.getElementById("imageModal").classList.remove("hidden");
+      }
+
+      function closeImageModal() {
+        document.getElementById("imageModal").classList.add("hidden");
+      }
+
+      function prevImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + images.length) % images.length;
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = images[currentImageIndex];
+      }
+
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = images[currentImageIndex];
+      }
+
+      function rateStar(starElement) {
+        const stars = starElement.parentElement.children;
+        const rating = starElement.getAttribute("data-value");
+
+        for (let i = 0; i < stars.length; i++) {
+          stars[i].textContent = i < rating ? "★" : "☆";
+        }
+      }
+    </script>
+  </body>
+</html>
