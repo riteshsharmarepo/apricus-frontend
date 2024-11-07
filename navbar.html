@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar</title>
+    <title>Sliding Sidebar Navigation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /* Custom hover effect for the links */
@@ -11,20 +11,15 @@
         content: "";
         position: absolute;
         inset: 0;
-        border-radius: 0.375rem; /* Rounded box */
-        background-color: rgba(
-          253,
-          230,
-          138,
-          0.4
-        ); /* Soft yellow background with low opacity */
+        border-radius: 0.375rem;
+        background-color: rgba(253, 230, 138, 0.4);
         z-index: -1;
         transform: scale(0);
         transition: transform 0.3s ease-in-out;
       }
 
       .hover-box:hover::before {
-        transform: scale(1); /* Box expands on hover */
+        transform: scale(1);
       }
 
       /* Contact Us button hover effect */
@@ -48,7 +43,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #fde68a; /* Soft yellow */
+        background-color: #fde68a;
         border-radius: 0.5rem;
         z-index: -1;
         transform: scale(0);
@@ -56,86 +51,64 @@
       }
 
       .contact-button:hover::before {
-        transform: scale(1); /* Fully expands to fill button on hover */
+        transform: scale(1);
       }
 
-      /* Additional yellow rectangle next to the button */
-      .contact-container {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.25rem;
-        position: relative;
+      /* Sidebar styling and animation */
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 75%;
+        max-width: 300px;
+        height: 100%;
+        background-color: #ffffff;
+        padding: 1rem;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 50;
+        transition: left 0.3s ease-in-out;
       }
 
-      .contact-highlight {
-        width: 16px;
-        height: 32px;
-        background-color: #fde68a;
-        border-radius: 0.25rem;
+      .sidebar.open {
+        left: 0;
+      }
+
+      /* Close button positioned to the right */
+      .close-button {
         position: absolute;
-        left: -20px;
-        transition: transform 0.3s ease-in-out;
+        top: 1rem;
+        right: 1rem;
       }
 
-      /* Move the yellow box inside the button on hover */
-      .contact-container:hover .contact-highlight {
-        transform: translateX(80px); /* Adjust to match the button's position */
+      /* Mobile menu toggle button */
+      .menu-toggle {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 60;
       }
     </style>
+    <script>
+      // Sidebar toggle function
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("open"); // Toggle the 'open' class to slide the sidebar in/out
+      }
+
+      // Ensure sidebar is initially hidden on load
+      window.onload = function () {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.style.display = "block"; // Make sidebar visible
+      };
+    </script>
   </head>
   <body class="bg-gray-50">
-    <!-- Navbar Container -->
-    <nav class="bg-white shadow-md">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo Placeholder -->
-          <div class="flex-shrink-0">
-            <a href="#">
-              <img src="logo.png" alt="Logo" class="h-8 w-auto" />
-            </a>
-          </div>
-          <!-- Navigation Menu -->
-          <div class="hidden md:flex space-x-6">
-            <a
-              href="#rooms"
-              class="relative hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
-            >
-              Rooms
-            </a>
-            <a
-              href="#dine"
-              class="relative hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
-            >
-              Dine
-            </a>
-            <a
-              href="#events"
-              class="relative hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
-            >
-              Events
-            </a>
-            <a
-              href="#gallery"
-              class="relative hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
-            >
-              Gallery
-            </a>
-          </div>
-          <!-- Contact Us Button with yellow rectangle -->
-          <div class="contact-container ml-4">
-            <!-- Yellow rectangle box -->
-            <div class="contact-highlight"></div>
-            <!-- Contact Us Button -->
-            <a href="#contact" class="contact-button"> Contact Us </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden flex justify-end px-4 pt-2">
+    <!-- Sidebar Menu (Mobile & Desktop) -->
+    <div id="sidebar" class="sidebar">
       <button
-        class="text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        class="close-button text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        onclick="toggleSidebar()"
       >
         <svg
           class="h-6 w-6"
@@ -148,10 +121,52 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
+            d="M6 18L18 6M6 6l12 12"
           />
         </svg>
       </button>
+      <a
+        href="#rooms"
+        class="block hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
+        >Rooms</a
+      >
+      <a
+        href="#dine"
+        class="block hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
+        >Dine</a
+      >
+      <a
+        href="#events"
+        class="block hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
+        >Events</a
+      >
+      <a
+        href="#gallery"
+        class="block hover-box text-gray-800 hover:text-gray-900 font-medium text-lg py-2 px-4 transition-all duration-300"
+        >Gallery</a
+      >
+      <a href="#contact" class="block contact-button mt-4">Contact Us</a>
     </div>
+
+    <!-- Floating Menu Toggle Button (Top Left) -->
+    <button
+      class="menu-toggle text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+      onclick="toggleSidebar()"
+    >
+      <svg
+        class="h-6 w-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
   </body>
 </html>
