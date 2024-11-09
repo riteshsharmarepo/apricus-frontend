@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional styles for hover and modal */
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .gallery-item:hover .overlay {
+        opacity: 1;
+      }
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 1rem;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 50;
+      }
+      .modal-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+      }
+      .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: white;
+        color: black;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 1.25rem;
+        border-radius: 0.25rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div
+      class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
+    >
+      <!-- Image Gallery Items -->
+      <div class="gallery-item" onclick="openModal(0)">
+        <img src="/2.jpg" alt="Image 1" class="w-full h-60 object-cover" />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 1</p>
+          <p>Subtitle 1</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img
+          src="/0389815740.jpg"
+          alt="Image 2"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 2</p>
+          <p>Subtitle 2</p>
+        </div>
+      </div>
+      <!-- Image Gallery Items -->
+      <div class="gallery-item" onclick="openModal(0)">
+        <img src="/1.jpg" alt="Image 1" class="w-full h-60 object-cover" />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 1</p>
+          <p>Subtitle 1</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img src="/33.jpg" alt="Image 2" class="w-full h-60 object-cover" />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 2</p>
+          <p>Subtitle 2</p>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for more images -->
+      <!-- Image Gallery Items -->
+      <div class="gallery-item" onclick="openModal(0)">
+        <img src="/1.jpg" alt="Image 1" class="w-full h-60 object-cover" />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 1</p>
+          <p>Subtitle 1</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 2"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 2</p>
+          <p>Subtitle 2</p>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for more images -->
+      <!-- Image Gallery Items -->
+      <div class="gallery-item" onclick="openModal(0)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 1"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 1</p>
+          <p>Subtitle 1</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 2"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 2</p>
+          <p>Subtitle 2</p>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for more images -->
+      <!-- Image Gallery Items -->
+      <div class="gallery-item" onclick="openModal(0)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 1"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 1</p>
+          <p>Subtitle 1</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 2"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 2</p>
+          <p>Subtitle 2</p>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for more images -->
+      <!-- Image Gallery Items -->
+      <div class="gallery-item" onclick="openModal(0)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 1"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 1</p>
+          <p>Subtitle 1</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 2"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 2</p>
+          <p>Subtitle 2</p>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for more images -->
+      <!-- Image Gallery Items -->
+      <div class="gallery-item" onclick="openModal(0)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 1"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 1</p>
+          <p>Subtitle 1</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Image 2"
+          class="w-full h-60 object-cover"
+        />
+        <div class="overlay">
+          <p class="text-lg font-bold">Title 2</p>
+          <p>Subtitle 2</p>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for more images -->
+
+      <!-- Modal for Image Slider -->
+      <div id="modal" class="modal flex items-center justify-center">
+        <div class="modal-content bg-white p-4 rounded-lg shadow-lg relative">
+          <button class="close-btn" onclick="closeModal()">×</button>
+          <div class="relative">
+            <button
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded"
+              onclick="prevImage()"
+            >
+              ❮
+            </button>
+            <img
+              id="modal-image"
+              src="https://via.placeholder.com/600"
+              alt="Modal Image"
+              class="w-full h-auto max-h-[80vh] object-cover"
+            />
+            <button
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded"
+              onclick="nextImage()"
+            >
+              ❯
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript for Modal Slider Functionality
+      const images = [
+        "https://via.placeholder.com/600", // Add your image URLs here
+        "https://via.placeholder.com/600",
+        "https://via.placeholder.com/600",
+        "https://via.placeholder.com/600",
+        "https://via.placeholder.com/600",
+        "https://via.placeholder.com/600",
+        "https://via.placeholder.com/600",
+        "https://via.placeholder.com/600",
+        // Add more images as needed
+      ];
+      let currentIndex = 0;
+
+      function openModal(index) {
+        currentIndex = index;
+        document.getElementById("modal-image").src = images[currentIndex];
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      function prevImage() {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+        document.getElementById("modal-image").src = images[currentIndex];
+      }
+
+      function nextImage() {
+        currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+        document.getElementById("modal-image").src = images[currentIndex];
+      }
+    </script>
+  </body>
+</html>
