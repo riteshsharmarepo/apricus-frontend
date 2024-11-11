@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Reset and main styles */
+      body,
+      table,
+      td,
+      p {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Email container */
+      .email-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+
+      /* Hero Section */
+      .hero {
+        background-color: #000;
+        text-align: center;
+        padding: 40px 20px;
+        color: #fff;
+      }
+
+      .hero img {
+        max-width: 100%; /* Ensures responsive resizing */
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        margin: 0;
+        color: #feba00;
+      }
+
+      /* Content Section with Borders */
+      .content {
+        padding: 30px 20px;
+        background-color: #fff;
+        border-left: 3px solid #feba00;
+        border-right: 3px solid #feba00;
+      }
+
+      .content p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .content a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      /* Bullet Points */
+      .bullet-points {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+
+      .bullet-points li {
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .bullet-points li::before {
+        content: "•";
+        font-size: 20px;
+        color: #feba00;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      /* Centered CTA Button at Bottom */
+      .cta-button-footer {
+        background-color: #feba00;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 25px;
+        font-size: 18px;
+        display: inline-block;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px auto;
+        display: block;
+        max-width: fit-content;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #f7f7f7;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+        border-top: 1px solid #ddd;
+      }
+
+      /* Responsive styling */
+      @media screen and (max-width: 600px) {
+        .email-container {
+          width: 100%;
+          padding: 0;
+        }
+
+        .hero {
+          padding: 30px 15px;
+        }
+
+        .hero img {
+          width: 80%; /* Make logo size more appropriate on mobile */
+        }
+
+        .hero p {
+          font-size: 14px;
+        }
+
+        .content {
+          padding: 20px 15px;
+        }
+
+        .content p {
+          font-size: 14px;
+        }
+
+        .bullet-points li {
+          font-size: 14px;
+        }
+
+        .cta-button-footer {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+
+        .footer {
+          font-size: 12px;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main email container -->
+    <table class="email-container" cellspacing="0" cellpadding="0" width="100%">
+      <!-- Hero Section with Logo -->
+      <tr>
+        <td class="hero">
+          <img
+            src="https://scontent.fccu18-1.fna.fbcdn.net/v/t39.30808-6/243363049_4514341945270812_5068909006225100905_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=AQJ4vBqpiwwQ7kNvgEllX9S&_nc_zt=23&_nc_ht=scontent.fccu18-1.fna&_nc_gid=AV4Je8j-NY9jE0299NCL3rw&oh=00_AYDUA0yzGOP6NkBwpTc1dRef8VZVN1FBNMGvP2lzmXhOig&oe=673794D4"
+            alt="Hashcoder Logo"
+          />
+          <p>Empowering Your Business with Digital Innovation</p>
+        </td>
+      </tr>
+
+      <!-- Content Section with Borders -->
+      <tr>
+        <td class="content">
+          <p>
+            At <strong>Hashcoder</strong>, we’re committed to helping businesses
+            like yours thrive online. Our range of services is designed to bring
+            your ideas to life, support your growth, and ensure your success in
+            the digital world.
+          </p>
+
+          <h2>What We Offer:</h2>
+
+          <!-- Bullet Points List -->
+          <ul class="bullet-points">
+            <li>
+              <strong>🌐 Web Design & CMS Development:</strong> Captivating
+              websites that are easy to manage.
+            </li>
+            <li>
+              <strong>📱 Mobile App Development:</strong> High-performance apps
+              that reach customers on any device.
+            </li>
+            <li>
+              <strong>🛒 E-Commerce Development:</strong> Custom online stores
+              that boost sales and conversions.
+            </li>
+            <li>
+              <strong>📈 SEO Services:</strong> Expert optimization for better
+              visibility and traffic.
+            </li>
+            <li>
+              <strong>🛍️ Shopify Customization:</strong> Unique themes and
+              functionality for standout Shopify stores.
+            </li>
+            <li>
+              <strong>📣 Digital Marketing:</strong> Effective social media and
+              PPC campaigns to drive engagement.
+            </li>
+          </ul>
+
+          <p>
+            Let us partner with you to elevate your business and make your
+            vision a reality.
+          </p>
+
+          <!-- CTA Button Footer at Bottom with Updated Text and Centered -->
+          <a href="mailto:info@hashcoder.com" class="cta-button-footer"
+            >Ready to start?</a
+          >
+        </td>
+      </tr>
+
+      <!-- Footer Section -->
+      <tr>
+        <td class="footer">
+          <p>Best Regards,</p>
+          <p><strong>The Hashcoder Team 🚀</strong></p>
+          <p>
+            📧
+            <a
+              href="mailto:info@hashcoder.com"
+              style="color: #333; text-decoration: none"
+              >info@hashcoder.com</a
+            >
+            | 📞 9002835282
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
