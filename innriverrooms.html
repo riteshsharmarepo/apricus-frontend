@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Cards</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .slider img {
+        min-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto p-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Room Card Template -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="relative overflow-hidden">
+            <div class="slider" id="slider1">
+              <img src="/inn4.jpeg" alt="Room Image 1" />
+              <img src="/inn2.jpeg" alt="Room Image 2" />
+              <img src="/inn3.jpeg" alt="Room Image 3" />
+            </div>
+            <button
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-800"
+              onclick="slidePrev('slider1')"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-800"
+              onclick="slideNext('slider1')"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div
+              class="absolute right-2 top-2 flex items-center bg-gray-800 text-white px-2 py-1 rounded-md"
+            >
+              <i class="fas fa-images mr-1"></i> 10 Photos
+            </div>
+          </div>
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">
+              King Deluxe Room River View with Balcony
+            </h2>
+            <p class="text-sm text-gray-600 mb-4">
+              Enjoy the luxury and comfort with stunning river views from your
+              private balcony.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <i class="fas fa-iron"></i>
+              <i class="fas fa-sync-alt"></i>
+              <i class="fas fa-bed"></i>
+              <i class="fas fa-bath"></i>
+              <i class="fas fa-door-open"></i>
+              <i class="fas fa-concierge-bell"></i>
+            </div>
+            <button
+              class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600"
+            >
+              Book Room
+            </button>
+          </div>
+        </div>
+        <!-- Copy and modify this card for the next two -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="relative overflow-hidden">
+            <div class="slider" id="slider2">
+              <img src="/inn2.jpeg" alt="Room Image 1" />
+              <img src="/inn3.jpeg" alt="Room Image 2" />
+              <img src="/inn4.jpeg" alt="Room Image 3" />
+            </div>
+            <button
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-800"
+              onclick="slidePrev('slider2')"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-800"
+              onclick="slideNext('slider2')"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div
+              class="absolute right-2 top-2 flex items-center bg-gray-800 text-white px-2 py-1 rounded-md"
+            >
+              <i class="fas fa-images mr-1"></i> 10 Photos
+            </div>
+          </div>
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">
+              King Deluxe Room River View with Balcony
+            </h2>
+            <p class="text-sm text-gray-600 mb-4">
+              Experience unmatched comfort with panoramic river views.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <i class="fas fa-iron"></i>
+              <i class="fas fa-sync-alt"></i>
+              <i class="fas fa-bed"></i>
+              <i class="fas fa-bath"></i>
+              <i class="fas fa-door-open"></i>
+              <i class="fas fa-concierge-bell"></i>
+            </div>
+            <button
+              class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600"
+            >
+              Book Room
+            </button>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="relative overflow-hidden">
+            <div class="slider" id="slider3">
+              <img src="/inn3.jpeg" alt="Room Image 1" />
+              <img src="/inn4.jpeg" alt="Room Image 2" />
+              <img src="/inn2.jpeg" alt="Room Image 3" />
+            </div>
+            <button
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-800"
+              onclick="slidePrev('slider3')"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-800"
+              onclick="slideNext('slider3')"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div
+              class="absolute right-2 top-2 flex items-center bg-gray-800 text-white px-2 py-1 rounded-md"
+            >
+              <i class="fas fa-images mr-1"></i> 10 Photos
+            </div>
+          </div>
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">
+              King Deluxe Room River View with Balcony
+            </h2>
+            <p class="text-sm text-gray-600 mb-4">
+              Indulge in luxury with private river-facing balconies.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <i class="fas fa-iron"></i>
+              <i class="fas fa-sync-alt"></i>
+              <i class="fas fa-bed"></i>
+              <i class="fas fa-bath"></i>
+              <i class="fas fa-door-open"></i>
+              <i class="fas fa-concierge-bell"></i>
+            </div>
+            <button
+              class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600"
+            >
+              Book Room
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function slideNext(id) {
+        const slider = document.getElementById(id);
+        const images = slider.getElementsByTagName("img");
+        let index =
+          Math.abs(
+            parseInt(slider.style.transform.replace("translateX(-", "")) || 0
+          ) / 100;
+        index = (index + 1) % images.length;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function slidePrev(id) {
+        const slider = document.getElementById(id);
+        const images = slider.getElementsByTagName("img");
+        let index =
+          Math.abs(
+            parseInt(slider.style.transform.replace("translateX(-", "")) || 0
+          ) / 100;
+        index = (index - 1 + images.length) % images.length;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+      }
+    </script>
+  </body>
+</html>
