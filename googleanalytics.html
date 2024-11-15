@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="container mx-auto">
+      <!-- Main Card -->
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <!-- Header -->
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-500 text-3xl mr-2">
+            <i class="fas fa-chart-bar"></i>
+            <!-- Analytics icon -->
+          </div>
+          <h1 class="text-2xl font-bold">Google Analytics</h1>
+        </div>
+
+        <!-- Goal Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <div class="p-2 text-center">
+            <h2 class="text-sm font-semibold mb-1">Goal Completions</h2>
+            <p class="text-xl font-bold">18.2K</p>
+            <p class="text-green-600 text-sm">▲ 20.7%</p>
+          </div>
+          <div class="p-2 text-center">
+            <h2 class="text-sm font-semibold mb-1">Sessions</h2>
+            <p class="text-xl font-bold">84.7K</p>
+            <p class="text-green-600 text-sm">▲ 21.9%</p>
+          </div>
+          <div class="p-2 text-center">
+            <h2 class="text-sm font-semibold mb-1">New Users</h2>
+            <p class="text-xl font-bold">58.8K</p>
+            <p class="text-green-600 text-sm">▲ 22.4%</p>
+          </div>
+        </div>
+
+        <!-- Smaller Donut Chart -->
+        <div class="mb-4 flex justify-center">
+          <canvas id="donutChart" style="max-width: 200px"></canvas>
+          <!-- Adjusted size -->
+        </div>
+
+        <!-- Data Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full border-t border-gray-200 text-sm">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-2 py-1 text-left font-medium">Page Title</th>
+                <th class="px-2 py-1 text-right font-medium">Sessions</th>
+                <th class="px-2 py-1 text-right font-medium">
+                  Goal Completions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="px-2 py-1">Home</td>
+                <td class="px-2 py-1 text-right">24,993</td>
+                <td class="px-2 py-1 text-right">469</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-2 py-1">Google Online Store</td>
+                <td class="px-2 py-1 text-right">10,256</td>
+                <td class="px-2 py-1 text-right">32</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-2 py-1">Chrome Dino Collectible Figure</td>
+                <td class="px-2 py-1 text-right">6,747</td>
+                <td class="px-2 py-1 text-right">62</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-2 py-1">Apparel | Google Merchandise</td>
+                <td class="px-2 py-1 text-right">4,229</td>
+                <td class="px-2 py-1 text-right">231</td>
+              </tr>
+              <tr>
+                <td class="px-2 py-1">Men's / Unisex | Apparel</td>
+                <td class="px-2 py-1 text-right">3,607</td>
+                <td class="px-2 py-1 text-right">811</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Donut Chart
+      const ctx = document.getElementById("donutChart").getContext("2d");
+      new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["(direct)", "google", "Partners", "dfa", "(not set)"],
+          datasets: [
+            {
+              data: [93.3, 3.5, 1.5, 1.2, 0.5], // Example data, adjust as needed
+              backgroundColor: [
+                "#F59E0B",
+                "#3B82F6",
+                "#10B981",
+                "#EF4444",
+                "#6B7280",
+              ],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+  <body class="bg-gray-100 p-6">
+    <div class="container mx-auto mt-20">
+      <!-- Main Card -->
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <!-- Header -->
+        <div class="flex items-center mb-4">
+          <div class="text-blue-500 text-3xl mr-2">
+            <i class="fas fa-search"></i>
+            <!-- Search Console icon -->
+          </div>
+          <h1 class="text-2xl font-bold">Google Search Console</h1>
+        </div>
+
+        <!-- Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <div class="p-2 text-center">
+            <h2 class="text-sm font-semibold mb-1">Clicks</h2>
+            <p class="text-xl font-bold">21.5K</p>
+            <p class="text-green-600 text-sm">▲ 67.2%</p>
+          </div>
+          <div class="p-2 text-center">
+            <h2 class="text-sm font-semibold mb-1">Impressions</h2>
+            <p class="text-xl font-bold">1.2M</p>
+            <p class="text-green-600 text-sm">▲ 10.3%</p>
+          </div>
+          <div class="p-2 text-center">
+            <h2 class="text-sm font-semibold mb-1">Average Position</h2>
+            <p class="text-xl font-bold">16.6</p>
+            <p class="text-red-600 text-sm">▼ 11.4%</p>
+          </div>
+        </div>
+
+        <!-- Line Chart -->
+        <div class="mb-4 flex justify-center">
+          <canvas id="lineChart" style="max-width: 300px"></canvas>
+        </div>
+
+        <!-- Data Table -->
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full border-t border-gray-200 text-sm">
+            <thead class="bg-purple-700 text-white">
+              <tr>
+                <th class="px-2 py-1 text-left font-medium">Query</th>
+                <th class="px-2 py-1 text-right font-medium">Clicks</th>
+                <th class="px-2 py-1 text-right font-medium">Impressions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">google merchandise store</td>
+                <td class="px-2 py-1 text-right">949</td>
+                <td class="px-2 py-1 text-right">13,788</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">chrome dino collectible</td>
+                <td class="px-2 py-1 text-right">883</td>
+                <td class="px-2 py-1 text-right">1,323</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">chrome dino figure</td>
+                <td class="px-2 py-1 text-right">604</td>
+                <td class="px-2 py-1 text-right">877</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">youtube merch</td>
+                <td class="px-2 py-1 text-right">498</td>
+                <td class="px-2 py-1 text-right">2,567</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">google dinosaur figure</td>
+                <td class="px-2 py-1 text-right">398</td>
+                <td class="px-2 py-1 text-right">525</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="px-2 py-1">google dino figure</td>
+                <td class="px-2 py-1 text-right">388</td>
+                <td class="px-2 py-1 text-right">548</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Landing Page Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full border-t border-gray-200 text-sm">
+            <thead class="bg-purple-700 text-white">
+              <tr>
+                <th class="px-2 py-1 text-left font-medium">Landing Page</th>
+                <th class="px-2 py-1 text-right font-medium">Url Clicks</th>
+                <th class="px-2 py-1 text-right font-medium">Impressions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">
+                  https://shop.googlemerchandisestore.com
+                </td>
+                <td class="px-2 py-1 text-right">7,182</td>
+                <td class="px-2 py-1 text-right">112,733</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">
+                  https://shop.googlemerchandisestore.com/product
+                </td>
+                <td class="px-2 py-1 text-right">2,076</td>
+                <td class="px-2 py-1 text-right">211,055</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">
+                  https://shop.googlemerchandisestore.com/another-product
+                </td>
+                <td class="px-2 py-1 text-right">1,997</td>
+                <td class="px-2 py-1 text-right">50,748</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-100">
+                <td class="px-2 py-1">
+                  https://shop.googlemerchandisestore.com/item
+                </td>
+                <td class="px-2 py-1 text-right">1,728</td>
+                <td class="px-2 py-1 text-right">94,497</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="px-2 py-1">
+                  https://shop.googlemerchandisestore.com/specific-page
+                </td>
+                <td class="px-2 py-1 text-right">1,426</td>
+                <td class="px-2 py-1 text-right">28,342</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Line Chart
+      const ctx = document.getElementById("lineChart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "Clicks Over Time",
+              data: [
+                120, 150, 170, 200, 300, 350, 400, 420, 380, 360, 310, 290,
+              ], // Example data
+              borderColor: "#3B82F6",
+              borderWidth: 2,
+              fill: false,
+              tension: 0.3,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              display: false,
+            },
+            y: {
+              display: false,
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
